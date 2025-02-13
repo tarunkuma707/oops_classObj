@@ -1,22 +1,49 @@
 <?php
 ///////// Interface //////////
-interface A{
-    function test();
+interface Aadhar{
+    function verifyAadhar();
 }
 
-interface X{
-    function hello();
+interface PanCard{
+    function verifyPanCard();
 }
 
-class B implements A, X{
-    function test(){
+class DrivingClass implements Aadhar, PanCard{
+    function verifyAadhar(){
         //////////// Write your own logic ////////
+        echo "Verify Aadhar";
     }
-    function hello(){
+    function verifyPanCard(){
         //////////// Write your own logic ////////
+        echo "Verify Pan Card";
+    }
+
+    function register(){
+        //////////// Write your own logic ////////
+        echo "Register for Driving Licence";
     }
 }
-$obj = new B();
-$obj->test();
-$obj->hello();
+$obj = new DrivingClass();
+$obj->verifyAadhar();
+$obj->verifyPanCard();
+
+class BankAccount implements Aadhar, PanCard{
+    function verifyAadhar(){
+        //////////// Write your own logic ////////
+        echo "Verify Aadhar";
+    }
+    function verifyPanCard(){
+        //////////// Write your own logic ////////
+        echo "Verify Pan Card";
+    }
+
+    function openAccount(){
+        //////////// Write your own logic ////////
+        echo "Open Account in Bank";
+    }
+}
+$obj2 = new BankAccount();
+$obj2->verifyAadhar();
+$obj2->verifyPanCard();
+$obj2->openAccount();
 ?>

@@ -16,6 +16,14 @@ class Student{
     }
 }
 
+///////////// Inherited Class /////////
+Class Newstudent extends Student{
+
+}
+
 $obj1   =   new Student();
 $obj1->set_name("Test");
-echo $obj1->get_name();
+echo "<br>".$obj1->get_name();
+$obj2   = new Newstudent();
+$obj2->set_name("Class2");
+echo "<br>".$obj2->get_name();

@@ -1,6 +1,6 @@
 <?php
 class Student{
-    private $name;
+    public $name;
     function __construct($str)
     {
         $this->name =   $str;   
@@ -27,6 +27,10 @@ Class Newstudent extends Student{
         echo "<br/>Child Class Constructor";
         parent::__construct("Parent Arguement");
     }
+
+    public function fetch_name(){
+        return $this->name;
+    }
 }
 
 $obj1   =   new Student("Test");
@@ -34,4 +38,4 @@ $obj1->set_name("Test");
 echo "<br>".$obj1->get_name();
 $obj2   = new Newstudent();
 $obj2->set_name("Class2");
-echo "<br>".$obj2->get_name();
+echo "<br>".$obj2->fetch_name();

@@ -2,29 +2,23 @@
 
 trait A {
     function fun1(){
-        echo "func1";
+        echo "Func1";
     }
 }
-class B {
-    use A;
+
+trait B {
     function fun2(){
-        echo "func2";
+        echo "Func2";
     }
 }
 
-class C {
-    function fun3(){
-        echo "fun3";
+Class Class1{
+    use A,B;
+    public function func3(){
+        echo "<br/>Class3: Func3";
     }
 }
-
-class D {
-    use A;
-    function fun4(){
-        echo "fun4";
-    }
-}
-
-$obj= new B();
+$obj =  new Class1();
 $obj->fun1();
-?>
+$obj->fun2();
+$obj->func3();

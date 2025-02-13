@@ -1,6 +1,10 @@
 <?php
 class Student{
     private $name;
+    function __construct($str)
+    {
+        $this->name =   $str;   
+    }
     function set_name($str){
         $this->name =   $str;
     }
@@ -18,10 +22,14 @@ class Student{
 
 ///////////// Inherited Class /////////
 Class Newstudent extends Student{
-
+    function __construct()
+    {
+        echo "<br/>Child Class Constructor";
+        parent::__construct("Parent Arguement");
+    }
 }
 
-$obj1   =   new Student();
+$obj1   =   new Student("Test");
 $obj1->set_name("Test");
 echo "<br>".$obj1->get_name();
 $obj2   = new Newstudent();

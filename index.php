@@ -1,8 +1,7 @@
 <?php
 class Student{
-    public $name;
-    function __construct($str)
-    {
+    private $name;
+    function set_name($str){
         $this->name =   $str;
     }
 
@@ -17,5 +16,6 @@ class Student{
     }
 }
 
-$obj1   =   new Student("ABC");
+$obj1   =   new Student();
+$obj1->set_name("Test");
 echo $obj1->get_name();

@@ -16,4 +16,7 @@ class B implements A, X{
         //////////// Write your own logic ////////
     }
 }
+$obj = new B();
+$obj->test();
+$obj->hello();
 ?>

@@ -22,5 +22,4 @@ class demo{
 $example = new demo();
 echo $example->name=15;
 print_r($example->getData());
-
 ?>
